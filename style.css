@@ -1,0 +1,253 @@
+
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd, #dbeafe);
+    padding: 50px 20px;
+    color: #1e293b;
+}
+
+/* =========================
+   TASK FORM CONTAINER
+========================= */
+
+.to-doTaskFormDiv {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(14, 116, 144, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.to-doTaskFormDiv h3 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 29px;
+    font-weight: 700;
+    color: #0369a1;
+    letter-spacing: 0.4px;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+.to-doTaskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.to-doTaskForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 7px;
+}
+
+.to-doTaskForm input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    color: #1e293b;
+    background: #f8fafc;
+    transition: all 0.25s ease;
+}
+
+.to-doTaskForm input:focus {
+    border-color: #0284c7;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.taskSubmitBtn {
+    margin-top: 17px;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.taskSubmitBtn:hover {
+    background: linear-gradient(135deg, #0369a1, #075985);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(2, 132, 199, 0.2);
+}
+
+.taskSubmitBtn:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   TASK LIST CONTAINER
+========================= */
+
+.task-list {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(14, 116, 144, 0.12);
+}
+
+.task-list:empty {
+    display: none;
+}
+
+/* =========================
+   INDIVIDUAL TASK
+========================= */
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 18px;
+    margin-bottom: 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 11px;
+    background: #f8fafc;
+    transition: all 0.25s ease;
+}
+
+.task-list li:last-child {
+    margin-bottom: 0;
+}
+
+.task-list li:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(30, 64, 175, 0.07);
+}
+
+/* =========================
+   TASK CHECKBOX
+========================= */
+
+.statusCheckBox {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: #0284c7;
+}
+
+/* =========================
+   TASK NAME AND DATE
+========================= */
+
+.task-list li span {
+    flex: 1;
+    min-width: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.task-list li button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 7px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.task-list li button:hover {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+/* =========================
+   TASK STATUS
+========================= */
+
+/* Default pending status */
+.task-list li .taskStatus {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    .to-doTaskFormDiv {
+        padding: 23px 18px;
+    }
+
+    .task-list {
+        padding: 13px;
+    }
+
+    .task-list li {
+        gap: 9px;
+        padding: 13px 10px;
+        flex-wrap: wrap;
+    }
+
+    .task-list li span {
+        font-size: 13px;
+    }
+
+    .task-list li button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .task-list li .taskStatus {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}

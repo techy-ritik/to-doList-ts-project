@@ -1,0 +1,23 @@
+{
+  "name": "to-dolist-ts-project",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000t\u0000o\u0000-\u0000d\u0000o\u0000L\u0000i\u0000s\u0000t\u0000-\u0000t\u0000s\u0000-\u0000p\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
+  "homepage": "https://github.com/techy-ritik/to-doList-ts-project#readme",
+  "bugs": {
+    "url": "https://github.com/techy-ritik/to-doList-ts-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techy-ritik/to-doList-ts-project.git"
+  },
+  "license": "ISC",
+  "author": "Ritikesh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "^7.0.2"
+  }
+}
